@@ -1,59 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:rgb(23, 23, 34)
+        }
+        .upperhead{
+            text-align: center;
+        }
+        .blocks{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            width: 30%;
+         margin: auto;
+            
+            }
+            .b1,.b2,.b3,.b4{
+                border: 2px;
+                flex-basis:45 ;
+                background-color: aliceblue;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 5px;
+                margin-top: 10%;
+            }
+            .details{
+              margin-top: 20%;
+            }
+            
+            
+    </style>
 </head>
 <body>
-  <header>
-    <nav><nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav></nav>
-  </header>
-  <main>
-    <div class="container mt-5 col-6">
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <div class="input-group-append">
-    <button id="add_btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-  </div>
-</div>
-<ul class="list-group">
-  <li class="list-group-item">An item</li>
- </ul>
-</div>
+    <div class="upperhead">
+      
+        <label for="cars">Pick a Movie:</label>
 
-  </main>
-  <script>
-    let addbtn = document.getElementById('add_btn')
-    addbtn.addEventListener('click',addchapters);
-    function addchapters(e){
-    let currentbtn = e.currentTarget;
-    let currentInput = currentbtn.previousElementSibling
-    console.log(currentInput.value)
-    }
-  </script>
+<select name="Movie" id="Moviess">
+  <option value="Toy story ($8)">Toy Story ($8)</option>
+  <option value="Avengers Endgame">Avengers Endgame($15)</option>
+  <option value="Transformers Age Of Extinction">Transformers Age Of Extinction($12)</option>
+  <option value="The Fablemans">The Fablemans($6)</option>
+</select>
+    </div>
+
+
+    <div class="blocks">
+   <div class="b1" id="button">1</div>
+   <div class="b1" id="button">2</div>
+    <div class="b2" id="button">3</div>
+    <div class="b3" id="button">4</div>
+    <br> 
+    <br>
+    <div class="b1" >5</div>
+    <div class="b1" >6</div>
+     <div class="b2">7</div>
+     <div class="b3">8</div>
+     </div>
+   
+    <div class="details" id="mul">Total Bill Is <input id="bill" value="0"/> </div>
+<script>
+
+    
+    let bill = document.getElementById("bill");
+    console.log(bill.value);
+
+    let addvalue = 12;
+    let value1 = 0
+
+  let Movie = document.getElementById("button")
+  let Moviesss = document.getElementById("")
+
+
+        Movie.addEventListener('click',addtotal);
+
+        function addtotal (e){
+            
+            value1 = parseInt(value1) + parseInt(addvalue);
+            
+                bill.value = value1;
+            console.log(value1);
+        }
+            
+        
+        
+
+</script>
 </body>
 </html>
